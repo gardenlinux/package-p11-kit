@@ -1,3 +1,4 @@
+# gnutls-team had the most recent version 
 pkg=p11-kit
 version="0.26.5-1"
 git_src --branch $version "https://salsa.debian.org/gnutls-team/p11-kit.git"
