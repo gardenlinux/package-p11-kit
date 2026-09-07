@@ -3,5 +3,5 @@ version_suffix=gl1+bp2150
 git_src --branch 0.26.5 https://github.com/p11-glue/p11-kit.git
 p11kit_salsa=$(mktemp -d)
 git clone --depth 1 --branch 0.25.5-3 https://salsa.debian.org/gnutls-team/p11-kit.git $p11kit_salsa
-cp -r $p11kit_salsa/debian $dir/src/
+cp -a $p11kit_salsa/debian $dir/src/
 apply_patches

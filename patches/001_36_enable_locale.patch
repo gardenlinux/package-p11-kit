@@ -1,0 +1,26 @@
+--- a/debian/patches/36_enable_locale.diff	2026-09-07 11:52:09.723344544 +0200
++++ b/debian/patches/36_enable_locale.diff	2026-09-07 12:04:19.461527115 +0200
+@@ -1,19 +1,12 @@
+-Description: enable building of gettext translations.
+-Author: Andreas Metzler <ametzler@debian.org>
+-Last-Update: 2023-10-26
+-Origin: vendor
+-
++diff --git a/configure.ac b/configure.ac
++index fae9893..c6b0bee 100644
+ --- a/configure.ac
+ +++ b/configure.ac
+-@@ -64,11 +64,10 @@ AC_PROG_CPP
+- AM_PROG_CC_C_O
+- PKG_PROG_PKG_CONFIG
++@@ -66,7 +66,6 @@ PKG_PROG_PKG_CONFIG
+  AM_PATH_PYTHON([3.6],, [:])
+  AM_MISSING_PROG([CASTXML], [castxml])
+  
+ -LINGUAS=""
+  AM_GNU_GETTEXT([external], [need-ngettext])
+  AM_GNU_GETTEXT_VERSION([0.19.8])
+- m4_ifdef([AM_GNU_GETTEXT_REQUIRE_VERSION],[
+- AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
+- ])
++ m4_ifdef([AM_GNU_GET][TEXT_REQUIRE_VERSION],[
